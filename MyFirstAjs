@@ -6,7 +6,7 @@
 <script type="text/javascript" src="angular.min.js"></script>
 <script>
     function Customer($scope) {
-        $scope.CustomerName = "Bhaskar";
+        $scope.CustomerName = "BhasPhani";
         $scope.CustomerCode = "101519";
         $scope.Submit = function () {
             if ($scope.CustomerName.lenght == 0) {
