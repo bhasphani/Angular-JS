@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<script type="text/javascript" src="angular.min.js"></script>
+<script>
+    function Customer($scope) {
+        $scope.CustomerName = "Bhaskar";
+        $scope.CustomerCode = "101519";
+        $scope.Submit = function () {
+            if ($scope.CustomerName.lenght == 0) {
+                alert("Not a Proper Data");
+            }
+            else
+            {
+                alert("Proper Data");
+            }
+        }
+    }
+    var MyApp = angular.module("MyApp", []);
+    MyApp.controller("Customerobj", Customer);
+
+</script>
+<body ng-app="MyApp">
+    <div id="CustScreen" ng-controller="Customerobj">
+        Customer Name : - <input ng-model="CustomerName" type="text" id="CustomerName" /><br/>
+        Customer Code : - <input ng-model="CustomerCode" type="text" id="CustomerCode" /><br />
+        <input type="button" ng-click="Submit()" value="Submit" /><br/>
+        {{CustomerName}}<br/>
+        {{CustomerCode}}<br />
+    </div>
+</body>
+</html>
